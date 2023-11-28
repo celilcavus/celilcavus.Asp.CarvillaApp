@@ -1,0 +1,28 @@
+﻿@model List<Services>
+<!--service start -->
+<section id="service" class="service">
+	<div class="container">
+		<div class="service-content">
+			<div class="justify-content-center">
+				
+				@foreach (var item in Model)
+				{
+					<div class="col col-md-4 col-sm-12">
+						<div class="single-service-item">
+							<div class="single-service-icon">
+								<i class="flaticon-car"></i>
+							</div>
+							<h2><a href="@item.Id">@item.Title</h2>
+							<p>
+								@item.Description
+							</p>
+						</div>
+					</div>
+				}
+			
+			</div>
+		</div>
+	</div><!--/.container-->
+
+</section><!--/.service-->
+<!--service end-->

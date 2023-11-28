@@ -1,0 +1,55 @@
+﻿@model Cars
+
+<div class="container">
+    <form asp-action="Index" asp-controller="Cars" method="post" enctype="multipart/form-data">
+        <div class="row mt-2">
+            <div class="col-12">
+                <label class="col-form-label">Select File</label>
+                <input asp-for="Image" class="form-control" type="file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+
+                <br />
+
+                <label class="col-form-label">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+                <br />
+
+                <label class="col-form-label">Model</label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+
+                <br />
+
+                <label class="col-form-label">Price</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+
+                <br />
+
+                <label class="col-form-label">Price Icon</label>
+                <input asp-for="PriceIcon" class="form-control" />
+                <span asp-validation-for="PriceIcon" class="text-danger"></span>
+
+                <br />
+
+                <label class="col-form-label">Description</label>
+                <textArea asp-for="Description" class="form-control w-100" style="height:300px;"></textArea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+
+                <br />
+
+
+                <div class="form-check">
+                    <input class="form-check-input" asp-for="IsActive" type="checkbox" value="" id="flexCheckIndeterminate">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                        Is Active
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>

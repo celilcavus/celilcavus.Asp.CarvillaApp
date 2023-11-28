@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "_Layout";
+}
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <!--service start -->
+    @await Component.InvokeAsync("Services")
+    <!--service end-->
+    <!--new-cars start -->
+    @await Component.InvokeAsync("NewCars")
+    <!--new-cars end -->
+    <!--featured-cars start -->
+    @await Component.InvokeAsync("Cars")
+    <!--featured-cars end -->
+    <!-- clients-say strat -->
+    @await Component.InvokeAsync("Clients")
+    <!-- clients-say end -->
+    <!--brand strat -->
+    @await Component.InvokeAsync("Brands")
+    <!--brand end -->
+    <!--blog start -->
+    <section id="blog" class="blog"></section><!--/.blog-->
+    <!--blog end -->
+
+
+
+
+
+
+</body>

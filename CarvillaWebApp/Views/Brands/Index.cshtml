@@ -1,0 +1,23 @@
+﻿@model Brands
+
+<div class="container">
+  <form asp-action="Index" asp-controller="Brands" method="post" enctype="multipart/form-data">
+        <div class="row mt-2">
+            <div class="col-12">
+                <label class="col-form-label">Select File</label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+
+                
+                <div class="form-check">
+                    <input class="form-check-input" asp-for="IsActive" type="checkbox" value="" id="flexCheckIndeterminate">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                        Is Active
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Upload File</button>
+  </form>
+</div>
